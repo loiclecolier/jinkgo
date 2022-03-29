@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React, { useEffect, useRef } from 'react'
 import './App.css';
+import Home from './Containers/Home/Home';
+import Valeurs from './Containers/Valeurs/Valeurs';
+import Competences from './Containers/Competences/Competences';
+import Notele from './Containers/Notele/Notele';
+import Contact from './Containers/Contact/Contact';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
+
+  const refContainers = useRef();
+
+  useEffect(() => {
+    console.log(refContainers);
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <div ref={refContainers} id="containers">
+        <Home forwardRef={refContainers}/>
+        <Valeurs />
+        <Competences />
+        <Notele />
+        <Contact />
+      </div>
+    </>
   );
 }
 
