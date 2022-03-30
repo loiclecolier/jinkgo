@@ -2,8 +2,8 @@
 Showcase website for enterprise Jinkgo SPRL.
 
 # Todo list
-- [ ] Mockup (design)
+- [x] Mockup (design)
 - [ ] Animations
-- [ ] Navigation on one page website
-- [ ] Smooth scroll from section page to another section page
+- [x] Navigation on one page website with anchors
+- [x] Scroll snap to navigate between sections
 - [ ] Contact form

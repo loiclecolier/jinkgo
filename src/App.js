@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import './App.css';
 import Home from './Containers/Home/Home';
 import Valeurs from './Containers/Valeurs/Valeurs';
@@ -11,15 +11,11 @@ function App() {
 
   const refContainers = useRef();
 
-  useEffect(() => {
-    console.log(refContainers);
-  })
-
   return (
     <>
-      <Navbar />
+      <Navbar forwardRef={refContainers} />
       <div ref={refContainers} id="containers">
-        <Home forwardRef={refContainers}/>
+        <Home forwardRef={refContainers} />
         <Valeurs />
         <Competences />
         <Notele />

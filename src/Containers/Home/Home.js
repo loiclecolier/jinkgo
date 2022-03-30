@@ -8,8 +8,7 @@ export default function Home(props) {
     const scrollToSection = () => {
       props.forwardRef.current.scroll({
         top: 473,
-        behavior: 'smooth',
-        duration: 3000
+        behavior: 'smooth'
       })
     }
 

@@ -1,3 +1,138 @@
 #valeurs {
-    background-color: darkkhaki;
+    background-color: #FFF;
+    background-image: url('bg-leaf.svg');
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: 100% -20%;
+    display: flex;
+}
+
+#valeurs .column-valeurs-1,
+#valeurs .column-valeurs-2 {
+    width: 50%;
+    height: 100%;
+}
+
+#valeurs .column-valeurs-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#valeurs .column-valeurs-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#valeurs h2 {
+    font-family: 'Barlow', sans-serif;
+    font-size: calc(40 * var(--res));
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#valeurs h2::after {
+    content: '';
+    display: block;
+    width: 20%;
+    height: 1px;
+    background-color: #FFF;
+    margin: calc(15 * var(--res)) 0 calc(25 * var(--res));
+}
+
+#valeurs p {
+    font-family: 'Poppins', sans-serif;
+    font-size: calc(22.5 * var(--res));
+    font-weight: 400;
+}
+
+#valeurs span {
+    font-weight: 600;
+}
+
+#valeurs .valeurs-performance {
+    background-color: #A2C3A2;
+    position: relative;
+    width: 75%;
+    color: #FFF;
+    padding: 1.5vw 2.5vw;
+}
+
+#valeurs .valeurs-performance::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -10px;
+    left: -10px;
+    border: 2px solid #A2C3A2;
+}
+
+#valeurs .valeurs-fiabilite {
+    background-color: #649B64;
+    position: relative;
+    width: 75%;
+    color: #FFF;
+    padding: 1.5vw 2.5vw;
+}
+
+#valeurs .valeurs-fiabilite::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -10px;
+    right: -10px;
+    border: 2px solid #649B64;
+}
+
+#valeurs .valeurs-experience {
+    background-color: #466D46;
+    position: relative;
+    width: 75%;
+    color: #FFF;
+    padding: 1.5vw 2.5vw;
+}
+
+#valeurs .valeurs-experience::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -10px;
+    left: -10px;
+    border: 2px solid #466D46;
+}
+
+#valeurs .valeurs-performance::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: url('decoration-leaf-1.svg');
+    background-repeat: no-repeat;
+    background-size: 65%;
+    height: calc(175 * var(--res));
+    width: calc(550 * var(--res));
+    top: 20%;
+    right: calc(-570 * var(--res));
+}
+
+#valeurs .valeurs-fiabilite::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: url('decoration-leaf-2.svg');
+    background-repeat: no-repeat;
+    background-size: 65%;
+    height: calc(320 * var(--res));
+    width: calc(250 * var(--res));;
+    top: 50%;
+    left: calc(-230 * var(--res));;
+    transform: rotate(15deg);
 }

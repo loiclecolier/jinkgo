@@ -1,18 +1,42 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './Navbar.css'
 import Logo from '../../assets/logo512.png'
 import LogoWhite from '../../assets/logo_white.png'
 
-export default function Navbar() {
+export default function Navbar(props) {
 
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  const refHeader = useRef();
+
+  useEffect(() => {
+
+    const containers = props.forwardRef.current;
+
+    containers.addEventListener('scroll', changeNavbar);
+
+    function changeNavbar () {
+        console.log(containers.scrollTop);
+        if (containers.scrollTop >= 525) {
+            refHeader.current.classList.add('header-dark');
+        }
+        else {
+            refHeader.current.classList.remove('header-dark');
+        }
+    }
+
+    return () => {
+        window.removeEventListener('scroll', changeNavbar);
+    }
+
+  }, [])
 
   const toggleNav = () => {
       setToggleMenu(!toggleMenu);
   }
 
   return (
-    <nav className="header">
+    <nav ref={refHeader} className="header">
         <a href="/" className="logo">
           <img src={Logo} alt="Jinkgo Logo" />
         </a>
