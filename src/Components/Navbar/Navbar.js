@@ -16,8 +16,7 @@ export default function Navbar(props) {
     containers.addEventListener('scroll', changeNavbar);
 
     function changeNavbar () {
-        console.log(containers.scrollTop);
-        if (containers.scrollTop >= 525) {
+        if (containers.scrollTop >= 550) {
             refHeader.current.classList.add('header-dark');
         }
         else {
@@ -42,7 +41,7 @@ export default function Navbar(props) {
         </a>
         <div className={toggleMenu ? "menu show-nav" : "menu"}>
             <a href="/" className="logo">
-            <img src={LogoWhite} alt="Jinkgo Logo" />
+                <img src={LogoWhite} alt="Jinkgo Logo" />
             </a>
             <ul className="navbar-menu">
                 <li className="navbar-menu-item">

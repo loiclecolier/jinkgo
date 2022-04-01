@@ -1,3 +1,182 @@
 #competences {
-    background-color: aquamarine;
+    background-color: #FFF;
+    display: flex;
+    align-items: flex-end;
+}
+
+#competences .cards-competences {
+    display: flex;
+    width: 100%;
+}
+
+#competences .card-cpt {
+    position: relative;
+    height: calc(100vh - calc(120 * var(--res)));
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#competences .card-cpt h2 {
+    margin-top: 77.5%;
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    font-size: calc(40 * var(--res));
+    color: #555;
+    text-transform: uppercase;
+    z-index: 2;
+    transition: 1s;
+}
+
+#competences .card-cpt p {
+    text-align: center;
+    width: 100%;
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+    font-size: calc(20 * var(--res));
+    font-weight: 400;
+    z-index: 2;
+    transition: 1s;
+}
+
+#competences .card-technique {
+    background: url('card-technique.jpg')
+                center center / cover
+                no-repeat;
+}
+
+#competences .card-orga {
+    background: url('card-orga.jpg')
+                center center / cover
+                no-repeat;
+}
+
+#competences .card-humain {
+    background: url('card-humain.jpg')
+                center center / cover
+                no-repeat;
+}
+
+#competences .card-reseaux {
+    background: url('card-reseaux.jpg')
+                center center / cover
+                no-repeat;
+}
+
+#competences .card-overlay {
+    background-color: rgba(255, 255, 255, .75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 1s;
+}
+
+#competences .card-cpt:hover {
+    justify-content: space-between;
+}
+
+#competences .card-orga:hover {
+    background: url('card-orga.jpg')
+                center center / cover
+                no-repeat;
+}
+
+#competences .card-cpt:hover h2,
+#competences .card-cpt:hover p {
+    display: block;
+    background-color: #FFF;
+}
+
+#competences .card-cpt:hover h2 {
+    padding: 4vh 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+}
+
+#competences .card-cpt:hover p {
+    padding: 2vh 0;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#competences .card-cpt:hover .card-overlay {
+    background-color: transparent;
+}
+
+#competences .modal-cpt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background-color: #FFF;
+    border-radius: 5px;
+    z-index: 200;
+    display: flex;
+}
+
+#competences .modal-cpt img {
+    width: 30%;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+}
+
+#competences .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(85, 85, 85, 0.8);
+    z-index: 199;
+    cursor: pointer;
+}
+
+#competences .modal-informations {
+    color: #555;
+    padding: 2vw;
+}
+
+#competences .modal-informations h2 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: calc(40 * var(--res));
+}
+
+#competences .modal-informations ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+#competences .modal-informations ul li{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: calc(17.5 * var(--res));
+    margin-bottom: 10px;
+}
+
+#competences .close-modal {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+#competences .close-modal svg {
+    color: #555;
+    width: 30px;
+    height: 30px;
 }
