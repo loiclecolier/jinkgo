@@ -7,7 +7,7 @@
 #home .site-title {
     text-align: right;
     align-self: flex-end;
-    padding: calc(170 * var(--res)) 2vw 0 0;
+    padding: calc(170 * var(--res)) 5vw 0 0;
 }
 
 #home .site-title h1,
@@ -84,4 +84,30 @@
     0% { transform: translateY(10px); }
     50% { transform: translateY(0); }
     100% { transform: translateY(10px); }
+}
+
+@media screen and (max-width: 700px) {
+    #home .site-mantra div:nth-child(1){
+        margin-left: calc(-50 * var(--res));
+    }
+    #home .site-mantra div:nth-child(3) {
+        margin-left: calc(50 * var(--res));
+    }
+    #home .site-mantra {
+        align-self: center;
+        justify-content: center;
+        margin-left: calc(50 * var(--res));
+    }
+    #home .site-mantra div {
+        font-size: 10vw;
+    }
+    #home {
+        justify-content: space-between;
+    }
+    #home .scroll-down svg {
+        height: 30px;
+        width: 30px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
 }

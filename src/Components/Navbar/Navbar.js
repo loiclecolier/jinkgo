@@ -16,7 +16,7 @@ export default function Navbar(props) {
     containers.addEventListener('scroll', changeNavbar);
 
     function changeNavbar () {
-        if (containers.scrollTop >= 550) {
+        if (containers.scrollTop >= window.innerHeight) {
             refHeader.current.classList.add('header-dark');
         }
         else {

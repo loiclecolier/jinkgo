@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vw;
+    padding: 2vh 5vw 2vh 3vw;
     transition: 1s;
     z-index: 100;
 }
@@ -14,6 +14,10 @@
 .header.header-dark {
     padding: 1vw 2vw;
     transition: 1s;
+}
+
+.header .logo {
+    line-height: 0;
 }
 
 .header .logo img {
@@ -42,7 +46,7 @@
 .menu .logo img {
     position: absolute;
     top: 2vw;
-    left: 2vw;
+    left: 5vw;
     height: calc(95 * var(--res));
     width: auto;
 }
@@ -99,7 +103,7 @@
     color: #FFF;
     font-family: 'Barlow', sans-serif;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: calc(30 * var(--res));
     text-transform: uppercase;
     margin-right: calc(20 * var(--res));
 }
@@ -109,14 +113,14 @@
 }
 
 .burger-bar {
-    transform: translateY(7.5px);
+    transform: translateY(calc(10 * var(--res)));
 }
 
 .burger-bar,
 .burger-bar::before {
     display: block;
-    width: 100px;
-    height: 3px;
+    width: calc(175 * var(--res));
+    height: calc(5 * var(--res));
     border-radius: 5px;
     position: relative;
     background: #FFF;
@@ -135,7 +139,7 @@
 }
 
 .burger-bar::before {
-    transform: translateY(-15px);
+    transform: translateY(calc(-20 * var(--res)));
 }
 
 .show-nav ~ .btn-burger .burger-name {

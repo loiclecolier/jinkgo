@@ -9,9 +9,9 @@
     height: 100%;
     padding: 5vh 2vw;
     background: url('bg-small-circle.svg')
-                120% 60% / 40% no-repeat,
+                bottom 180px right -60px / 125px no-repeat,
                 url('bg-big-circle.svg')
-                bottom right / 60% no-repeat,
+                bottom right / 250px no-repeat,
                 #466D46;
 }
 
@@ -65,12 +65,12 @@
 #contact .contact-section {
     width: 66%;
     height: 100%;
-    padding: 5vh 2vw;
+    padding: 5vh 4vw;
 }
 
 #contact .form-contact .informations-contact {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: calc(40 * var(--res));
 }
 
 #contact .form-contact label {
@@ -81,8 +81,8 @@
 }
 
 #contact .form-contact input {
-    height: 6vh;
-    width: 20vw;
+    height: calc(65 * var(--res));
+    width: 25vw;
 }
 
 #contact .form-contact .inp-name {
@@ -90,7 +90,7 @@
 }
 
 #contact .form-contact textarea {
-    width: calc(40vw + 2.5vw);
+    width: calc(50vw + 2.5vw);
     height: 20vh;
 }
 
@@ -102,7 +102,7 @@
     border-radius: 5px;
     border: none;
     font-family: 'Poppins', sans-serif;
-    padding: 10px;
+    padding: calc(15 * var(--res));
     font-size: calc(20 * var(--res));
 }
 
@@ -110,7 +110,7 @@
     background: #649B64;
     color: #FFF;
     font-family: 'Poppins', sans-serif;
-    margin-top: 30px;
+    margin-top: calc(40 * var(--res));
     font-size: calc(25 * var(--res));
     cursor: pointer;
     transition: .3s;
@@ -135,16 +135,40 @@ textarea {
 }
 
 #contact img {
-    width: calc(150 * var(--res));
+    width: calc(100 * var(--res));
     height: auto;
     border-radius: 5px;
-    margin-right: 15px;
+    margin-right: calc(20 * var(--res));
 }
 
 #contact img:nth-child(3) {
-    margin-right: 25px;
+    margin-right: calc(30 * var(--res));
 }
 
 #contact .customers-image {
     margin-top: 2vh;
+}
+
+@media screen and (max-width: 700px) {
+    #contact .coordonnees div {
+        flex-direction: column;
+    }
+    #contact .coordonnees div svg {
+        margin-right: 0;
+        margin-bottom: 5px;
+        width: calc(50 * var(--res));
+    }
+    #contact .coordonnees div p,
+    #contact .coordonnees div a {
+        text-align: center;
+    }
+    #contact .form-contact .informations-contact {
+        flex-direction: column;
+    }
+    #contact .form-contact input {
+        width: 52.5vw;
+    }
+    #contact .informations-contact div:nth-child(2) {
+        margin-top: calc(40 * var(--res));
+    }
 }

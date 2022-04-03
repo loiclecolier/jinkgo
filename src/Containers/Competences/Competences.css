@@ -143,33 +143,33 @@
 
 #competences .modal-informations {
     color: #555;
-    padding: 2vw;
+    padding: 4vw;
 }
 
 #competences .modal-informations h2 {
     font-family: 'Barlow', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: calc(40 * var(--res));
     font-size: calc(40 * var(--res));
 }
 
 #competences .modal-informations ul {
-    padding-left: 20px;
+    padding-left: calc(30 * var(--res));
     list-style-type: disc;
 }
 
 #competences .modal-informations ul li{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: calc(17.5 * var(--res));
+    font-size: calc(20 * var(--res));
     margin-bottom: 10px;
 }
 
 #competences .close-modal {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 2vw;
+    right: 2vw;
     cursor: pointer;
     background: transparent;
     border: none;
@@ -177,6 +177,34 @@
 
 #competences .close-modal svg {
     color: #555;
-    width: 30px;
-    height: 30px;
+    width: calc(40 * var(--res));
+    height: calc(40 * var(--res));
+}
+
+@media screen and (max-width: 700px) {
+
+    #competences .card-cpt {
+        width: 50%;
+        height: calc(50vh - calc(60 * var(--res)));
+    }
+    #competences .card-cpt h2 {
+        margin-top: 27.5%;
+    }
+    #competences .cards-competences {
+        flex-wrap: wrap;
+    }
+
+    #competences .modal-cpt {
+        flex-direction: column;
+        height: auto;
+    }
+    #competences .modal-cpt img {
+        width: 100%;
+        height: 20vh;
+        border-radius: 5px 5px 0 0;
+    }
+    #competences .modal-humain .close-modal svg,
+    #competences .modal-technique .close-modal svg {
+        color: #FFF;
+    }
 }

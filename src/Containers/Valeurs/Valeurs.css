@@ -53,15 +53,20 @@
     font-weight: 600;
 }
 
+#valeurs .container-performance {
+    width: 75%;
+    position: relative;
+}
+
 #valeurs .valeurs-performance {
     background-color: #A2C3A2;
     position: relative;
-    width: 75%;
     color: #FFF;
     padding: 1.5vw 2.5vw;
+    z-index: 2;
 }
 
-#valeurs .valeurs-performance::before{
+#valeurs .container-performance::before{
     content: '';
     display: block;
     position: absolute;
@@ -70,17 +75,22 @@
     bottom: -10px;
     left: -10px;
     border: 2px solid #A2C3A2;
+    z-index: 1;
+}
+
+#valeurs .container-fiabilite {
+    width: 75%;
+    position: relative;
 }
 
 #valeurs .valeurs-fiabilite {
     background-color: #649B64;
     position: relative;
-    width: 75%;
     color: #FFF;
     padding: 1.5vw 2.5vw;
 }
 
-#valeurs .valeurs-fiabilite::before{
+#valeurs .container-fiabilite::before{
     content: '';
     display: block;
     position: absolute;
@@ -91,15 +101,19 @@
     border: 2px solid #649B64;
 }
 
+#valeurs .container-experience {
+    width: 75%;
+    position: relative;
+}
+
 #valeurs .valeurs-experience {
     background-color: #466D46;
     position: relative;
-    width: 75%;
     color: #FFF;
     padding: 1.5vw 2.5vw;
 }
 
-#valeurs .valeurs-experience::before {
+#valeurs .container-experience::before {
     content: '';
     display: block;
     position: absolute;
@@ -131,8 +145,64 @@
     background-repeat: no-repeat;
     background-size: 65%;
     height: calc(320 * var(--res));
-    width: calc(250 * var(--res));;
-    top: 50%;
-    left: calc(-230 * var(--res));;
+    width: calc(250 * var(--res));
+    top: 30%;
+    left: calc(-230 * var(--res));
     transform: rotate(15deg);
+}
+
+@media screen and (max-width: 1150px) {
+    #valeurs .valeurs-performance::after {
+        top: 25%;
+    }
+    #valeurs .valeurs-fiabilite::after {
+        width: calc(200 * var(--res));
+        left: calc(-180 * var(--res));
+        top: 50%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #valeurs {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        background-size: 50%;
+        background-position: 100% 0%;
+    }
+    #valeurs .valeurs-fiabilite::after,
+    #valeurs .valeurs-performance::after,
+    #valeurs .valeurs-experience::after,
+    #valeurs .container-fiabilite::before,
+    #valeurs .container-performance::before,
+    #valeurs .container-experience::before {
+        display: none;
+    }
+    #valeurs .column-valeurs-1,
+    #valeurs .column-valeurs-2 {
+        width: 100%;
+        height: auto;
+    }
+    #valeurs .valeurs-fiabilite,
+    #valeurs .valeurs-performance,
+    #valeurs .valeurs-experience {
+        margin-top: 15px;
+        border-radius: 5px;
+        padding: 2vh 3vh;
+    }
+    #valeurs .container-fiabilite,
+    #valeurs .container-performance,
+    #valeurs .container-experience {
+        display: flex;
+        width: 90%;
+    }
+    #valeurs p {
+        font-size: 1.75vh;
+    }
+    #valeurs h2 {
+        font-size: 2.75vh;
+    }
+    #valeurs .container-fiabilite {
+        margin-bottom: 10px;
+    }
 }
